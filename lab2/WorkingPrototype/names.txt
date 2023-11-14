@@ -1,0 +1,25 @@
+DELAY 1000
+REM open notepad
+GUI r
+DELAY 500
+STRING notepad.exe
+ENTER
+DELAY 2000
+REM type names
+STRING echo Varsha and Artem
+DELAY 1000
+REM save file
+CTRL s
+STRING ournames.bat
+ENTER
+DELAY 2000
+CTRL w
+REM Run the batch file
+GUI r
+DELAY 2000
+STRING cmd
+ENTER
+DELAY 2000
+STRING C:\Users\varsh\Fall2023\CSE3140\lab2\WorkingPrototype\ournames.bat
+DELAY 2000
+ENTER

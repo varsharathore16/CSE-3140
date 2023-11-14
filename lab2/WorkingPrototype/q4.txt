@@ -1,0 +1,28 @@
+DELAY 1000
+REM open notepad
+GUI r
+DELAY 500
+STRING notepad.exe
+ENTER
+DELAY 1000
+STRING print("Hello, World!")
+DELAY 1000
+REM save file
+CTRL s
+DELAY 2000
+STRING hello.py
+ENTER
+DELAY 2000
+CTRL w
+GUI r
+DELAY 2000
+STRING cmd
+ENTER
+DELAY 2000
+STRING cd C:\Users\varsh\Fall2023\CSE3140\lab2\WorkingPrototype
+DELAY 5000
+ENTER
+DELAY 3000
+STRING python hello.py
+DELAY 1000
+ENTER

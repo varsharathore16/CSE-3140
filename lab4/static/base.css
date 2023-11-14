@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #300A24;
+    display: grid;
+    align-items: top;
+    justify-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+element.style {
+    background-image: url(static/images/Spring_Fog.jpg);
+}
+
+body {
+    display: block;
+    margin: 8px;
+        margin-top: 8;
+        margin-right: 8;
+        margin-bottom: 8;
+        margin-left: 8;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+html[AttributesStyle] {
+    -webkit-locale: "en";
+}
+
+:root {
+    view-transition-name: root;
+}
+
+html {
+    display: block;
+}
+
+head {
+    display: none;
+}

