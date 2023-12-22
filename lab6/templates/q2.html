@@ -1,0 +1,31 @@
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">x</span>
+            <p>Click the button below to get your prize!</p>
+            <a href="http://127.0.0.1:2223/loggedIn?username=Benign&moneyAmount=1">
+                <button id="myBtn">Claim prize!</button>
+            </a>
+            
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        // btn.onclick = function(){
+           //  <meta http-equiv="refresh" content="1; URL=http://127.0.0.1:2223/loggedIn" />
+            // return redirect('http://127.0.0.1:2223/loggedIn');
+        // }
+
+        document.addEventListener("DOMContentLoaded", function(event){
+            modal.style.display="block";
+        });
+
+        span.onclick = function(){
+            modal.style.display="none";
+        }
+    </script>
+</body>
